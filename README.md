@@ -1,2 +1,2 @@
-# RippleShader
-Water ripple shader for unity
+# Unity Ripple Shader
+Simple water ripple shader for unity.
