@@ -1228,7 +1228,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  MagnitudeDivider: 0.3
+  MagnitudeDivider: 0.5
   SpeedWaveSpread: 8
 --- !u!65 &458237570
 BoxCollider:

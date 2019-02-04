@@ -47,10 +47,6 @@ Shader "Custom/WaterRippleShader"
 		float _xImpact1, _zImpact1, _xImpact2, _zImpact2, _xImpact3, _zImpact3, _xImpact4, _zImpact4, _xImpact5, _zImpact5, _xImpact6, _zImpact6,
 			_xImpact7, _zImpact7, _xImpact8, _zImpact8;
 
-        UNITY_INSTANCING_BUFFER_START(Props)
-
-        UNITY_INSTANCING_BUFFER_END(Props)
-
 		void vert(inout appdata_full v, out Input o) 
 		{
 			UNITY_INITIALIZE_OUTPUT(Input, o)
@@ -111,10 +107,8 @@ Shader "Custom/WaterRippleShader"
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
-            // Albedo comes from a texture tinted by color
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color ;
             o.Albedo = c.rgb;
-            // Metallic and smoothness come from slider variables
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
             o.Alpha = c.a;
